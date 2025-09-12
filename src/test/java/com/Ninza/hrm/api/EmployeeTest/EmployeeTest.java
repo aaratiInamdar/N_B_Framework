@@ -5,7 +5,6 @@ import com.Ninza.hrm.BaseClass.BaseAPIClass;
 import com.Ninza.hrm.EndPoints.IEndPoint;
 import com.Ninza.hrm.PojoClassUtility.EmployeePojoClass;
 import com.Ninza.hrm.PojoClassUtility.ProjectPojo;
-import io.restassured.http.ContentType;
 import static io.restassured.RestAssured.*;
 import java.io.IOException;
 import java.util.Random;
@@ -13,8 +12,7 @@ import java.util.Random;
 public class EmployeeTest extends BaseAPIClass{
 
 	String projectName;
-	String username;
-	
+	String username;	
 	@Test
 	public void addEmployeTest() throws IOException
 	{
@@ -37,11 +35,8 @@ public class EmployeeTest extends BaseAPIClass{
 		.then()
 		.spec(specResponseObj)
 		.log().all();
-			
-		
-//		API2 ==>Add emp to same Project
-	
-		
+				
+//		API2 ==>Add emp to same Project	
 		EmployeePojoClass empPojo=new EmployeePojoClass( "Architect", " 24/04/1983", "abc@gmail.com",username , 18,
 				 "1234567890",  projectName,  "Role_Employee", username);
 		
@@ -59,8 +54,6 @@ public class EmployeeTest extends BaseAPIClass{
 					     .log().all();
 		 
 	}
-
-	
 			@Test
 			public void addEmployeeWithoutMailTest() throws IOException
 			{
@@ -84,11 +77,8 @@ public class EmployeeTest extends BaseAPIClass{
 				.then()
 				.spec(specResponseObj)
 				.log().all();
-					
-				
-//				API2 ==>Add emp to same Project
-			
-				
+									
+//				API2 ==>Add emp to same Project				
 				EmployeePojoClass empPojo=new EmployeePojoClass( "Architect", " 24/04/1983","",username , 18,
 						 "1234567890",  projectName,  "Role_Employee", username);
 				
@@ -103,6 +93,5 @@ public class EmployeeTest extends BaseAPIClass{
 				.spec(specResponseObj)
 					.assertThat().statusCode(500)
 				     .log().all();
-			}
-			
+			}			
 }

@@ -30,18 +30,17 @@ public class BaseAPIClass {
 		RequestSpecBuilder builder=new RequestSpecBuilder();
 		builder.setContentType(ContentType.JSON);
 		
+		
 //		builder.setAuth(basic("username", "password"));
 //		builder.addHeader("", "");
 		
 		builder.setBaseUri(fu.getDataFromProperties("BASEURI"));
 		 specRequestObj = builder.build();
-		 
-		 
+			 
 		 ResponseSpecBuilder resBuilder=new ResponseSpecBuilder();
 		 resBuilder.expectContentType(ContentType.JSON);
 		  specResponseObj = resBuilder.build();
 	}
-	
 	
 	@AfterSuite
 	public void configAS()
