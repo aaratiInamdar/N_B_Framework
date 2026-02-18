@@ -3,26 +3,7 @@
   <groupId>NINZA_Backend_Framework</groupId>
   <artifactId>NINZA_Backend_Framework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
-  <profiles>
- 	 <profile>
- 		 <id>RT</id>		 
-  <build>
-  <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.5.3</version>
-        <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>FullRegression.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-      </plugin>
-</plugins>
-</build>
- 	 </profile>
- 	 
+ <profiles>
  	  <profile>
  		 <id>ST</id>		 
   <build>
