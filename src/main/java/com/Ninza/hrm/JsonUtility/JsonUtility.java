@@ -18,14 +18,12 @@ public class JsonUtility {
 		
 	}
 	
-	
 //	 get the XML data from based on XML complex xpath
 	
 	public String getDataOnXpathPath(Response response , String xmlXpath)
 	{
 		return response.xmlPath().get(xmlXpath);
 	}
-	
 	
 //	verify the data in jsonbody based jsonpath
 	
@@ -48,7 +46,6 @@ public class JsonUtility {
 		}
 		return flag ;
 	}
-	
 	
 //	get the access token 
 	public String getAccessToken() throws IOException

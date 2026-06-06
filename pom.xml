@@ -5,7 +5,9 @@
   <version>0.0.1-SNAPSHOT</version>
  <profiles>
  	  <profile>
- 		 <id>ST</id>		 
+ 		 <id>ST</id>	
+ 		  </profile>
+  </profiles>	 
   <build>
   <plugins>
       <plugin>
@@ -20,8 +22,7 @@
       </plugin>
 </plugins>
 </build>
- 	 </profile>
-  </profiles>
+ 	
   
   <dependencies>
   
